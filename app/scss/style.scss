@@ -1,34 +1,333 @@
-@import "fonts"; 
+@import "fonts";
 @import "vars";
 
-*{
+* {
   box-sizing: border-box;
 }
 
-img{
+img {
   max-width: auto;
-  width: 100%;
+  width: auto;
 }
 
-a{
+a {
   color: black;
   text-decoration: none;
   display: inline-block;
 }
 
-ul,li{
+ul,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.container{
+.container {
   max-width: 936px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-body{
+.btn {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+body {
+  color: #000;
+}
+
+// ^^^ Main internals ^^^
+
+.header {
+  padding-top: 16px;
+  padding-bottom: 26px;
+  display: flex;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__info {
+  display: flex;
+}
+
+.header__logo {
+  margin: 0px 100px 0px 56px;
+}
+
+.header__project-name {
+  color: #262626;
+  font-family: $myriadregular;
+  font-size: 35px;
+  font-weight: normal;
+  padding-right: 15px;
+}
+
+.header__date-start {
+  font-family: $helvlight;
+  font-size: 15px;
+  color: #4090db;
+  border: 1px solid #4090db;
+  padding: 10px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.header__info {
+  font-size: 17px;
+  color: #3d4044;
+  font-family: $proximabold;
+  & span {
+    font-family: $proximaregular;
+  }
+}
+
+.header__posts,
+.header__followers {
+  margin-right: 30px;
+}
+
+.header__datepicker {
+  padding-top: 23px;
+  display: flex;
+}
+
+.header__datepicker_date {
+  font-size: 17px;
+  color: #262626;
+  line-height: 26px;
+  font-family: $myriadregular;
+  padding-right: 10px;
+}
+
+#datepicker,
+#datepicker2 {
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+  border: 1px solid #cccccc;
+  padding: 5px 8px;
+  width: 120px;
+  &::placeholder {
+    color: #333333;
+  }
+}
+
+#datepicker2 {
+  margin-left: 30px;
+}
+
+.header__datepicker_close {
+  background-color: #ebebeb;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 8px 5px;
+  margin-left: -4px;
+}
+
+.header__datepicker_calendar {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+  padding: 4px 8px 8px;
+  margin-left: -4px;
+}
+
+// Gallery
+
+.gallery {
+  background-color: #f9f9f9;
+  padding: 71px 0px 74px;
+}
+
+.gallery__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: center;
+}
+
+.gallery__item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 284px;
+  height: 284px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  margin-bottom: 30px;
+  font-family: $proximasemibold;
+  &:hover{
+    transition: all .4s;
+    opacity: 0.8;
+    
+  }
+}
+
+.gallery__item-1 {
+  background-image: url("../img/img-1.jpg");
+}
+
+.gallery__item-2 {
+  background-image: url("../img/img-2.jpg");
+  margin: 0px 27px;
+}
+
+.gallery__item-3 {
+  background-image: url("../img/img-3.jpg");
+}
+
+.gallery__item-4 {
+  background-image: url("../img/img-4.jpg");
+}
+
+.gallery__item-5 {
+  background-image: url("../img/img-5.jpg");
+  margin: 0px 27px;
+}
+
+.gallery__item-6 {
+  background-image: url("../img/img-6.jpg");
+}
+
+.gallery__item-7 {
+  background-image: url("../img/img-7.jpg");
+}
+
+.gallery__item-8 {
+  background-image: url("../img/img-8.jpg");
+  margin: 0px 27px;
+}
+
+.gallery__item-9 {
+  background-image: url("../img/img-9.jpg");
+}
+
+.gallery__info-day,
+.gallery__info-date {
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+}
+
+.gallery__day,
+.gallery__date {
+  width: 90px;
+}
+
+.gallery__date_like,
+.gallery__like {
+  width: 90px;
+  font-family: $proximabold;
+  & span {
+    padding-right: 5px;
+  }
+}
+.gallery__comments,
+.gallery__date_comments {
+  font-family: $proximabold;
+  display: flex;
+  & img {
+    padding-right: 5px;
+  }
+}
+.gallery__video {
+  position: absolute;
+  top: -85px;
+  right: -10px;
+}
+
+.icon-play {
+  font-size: 20px;
+}
+.gallery__upload {
+  padding-top: 70px;
+  text-align: center;
+}
+
+.gallery__btn {
+  border: 1px solid #000000;
+  border-radius: 50px;
+  font-family: $proximaregular;
+  padding: 11px 30px;
+  display: flex;
+  margin: 0 auto;
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    transition: all 0.4s;
+  }
+}
+
+// Editing by air-datepicker
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover {
+  background-color: transparent;
+}
+.ui-datepicker .ui-datepicker-header {
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover {
+  border: 1px solid transparent;
+  width: 24px;
+  border-radius: 5px;
+  height: 24px;
+  text-align: center;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  background: #f5f5f5;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background: #007fff;
   color: #fff;
 }
 
+.ui-datepicker .ui-datepicker-next {
+  &:before {
+    position: absolute;
+    content: "≫";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  &:before {
+    position: absolute;
+    content: "≪";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.ui-datepicker {
+  width: 14em;
+}
