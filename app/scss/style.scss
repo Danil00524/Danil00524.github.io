@@ -222,11 +222,12 @@ body {
   width: 90px;
 }
 
-.gallery__date_like,
-.gallery__like {
+.gallery__date_like, .gallery__like {
+  display: flex;
   width: 90px;
-  font-family: $proximabold;
-  & span {
+  font-family: "ProximaNova-Bold",sans-serif;
+  align-items: center;
+  & span{
     padding-right: 5px;
   }
 }
@@ -236,6 +237,7 @@ body {
   display: flex;
   & img {
     padding-right: 5px;
+    height: 18px;
   }
 }
 .gallery__video {
