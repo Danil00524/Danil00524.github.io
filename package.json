@@ -5,18 +5,15 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
+    "air-datepicker": "^2.2.3",
     "browser-sync": "^2.26.3",
-    "doiuse": "^4.2.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglifyjs": "^0.6.2",
     "normalize.css": "^8.0.1",
-    "postcss": "^7.0.17",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {

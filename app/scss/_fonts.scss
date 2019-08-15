@@ -25,7 +25,7 @@
   src:  url('../fonts/ProximaNova-Bold.eot?afboeg#iefix') format('embedded-opentype'),
     url('../fonts/ProximaNova-Bold.ttf?afboeg') format('truetype'),
     url('../fonts/ProximaNova-Bold.woff?afboeg') format('woff');
-  font-weight: Bold;
+  font-weight: Bold; 
   font-style: normal;
 }
 
@@ -54,11 +54,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?afboeg');
-  src:  url('../fonts/icomoon.eot?afboeg#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?afboeg') format('truetype'),
-    url('../fonts/icomoon.woff?afboeg') format('woff'),
-    url('../fonts/icomoon.svg?afboeg#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?euk7la');
+  src:  url('../fonts/icomoon.eot?euk7la#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?euk7la') format('truetype'),
+    url('../fonts/icomoon.woff?euk7la') format('woff'),
+    url('../fonts/icomoon.svg?euk7la#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -78,6 +78,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close:before {
+  content: "\e900";
+}
 .icon-heart:before {
   content: "\f004";
 }
