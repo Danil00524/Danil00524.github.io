@@ -1,0 +1,168 @@
+@import "vars";
+
+footer{
+  background-color: #263238;
+}
+.footer__content{
+  padding: 100px 0;
+}
+.footer__title{
+  font-family: $ral;
+  color: #fff;
+  font-size: 22px;
+  padding-bottom: 30px;
+  position: relative;
+  &:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 3px;
+    width: 52px;
+    background-color: $green;
+  }
+}
+
+.footer__text{
+  font-family: $roboto;
+  color: #b7c3c8;
+  padding-top: 30px;
+  padding-bottom: 58px;
+}
+
+.footer__address{
+  padding-left: 30px;
+  font-family: $lato;
+  color: #fff;
+  position: relative;
+  padding-bottom: 23px;
+  &:before{
+    content: "\f041";
+    font-family: "icomoon";
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $green;
+  }
+}
+.footer__phone{
+  padding-left: 30px;
+  position: relative;
+  a{
+    font-family: $lato;
+    color: #fff;
+  }
+  &:before{
+    content: "\f095";
+    font-family: "icomoon";
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $green;
+  }
+}
+
+.footer__list{
+  padding-top: 30px;
+  li{
+    position: relative;
+    padding-left: 22px;
+    padding-bottom: 21px;
+    a{
+      color: #b7c3c8;
+      font-family: $roboto;
+    }
+    &:before{
+      content: "\f105";
+      font-family: "icomoon";
+      font-size: 18px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $green;
+    }
+  }
+}
+.footer__form-title{
+  margin-bottom: 7px;
+  font-size: 20px;
+  color: #fff;
+}
+.footer__form{
+  input{
+  line-height: 40px;
+  width: 215px;
+  padding: 0px 15px;
+  background-color: #2f3c43;
+  outline: none;
+  border: none;
+  border: 1px solid black;
+  border-bottom: 1px solid #253136;
+  border-right: none;
+  color: #fff;
+  }
+  button{
+    border: 1px solid black;
+    border-bottom: 1px solid #253136;
+    border-left: none;
+    background-color: $green;
+    outline: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 13px;
+    left: -2px;
+    &:before{
+      content: "\f124";
+      font-family: "icomoon";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+}
+.footer__social{
+  li{
+    display: inline-block;
+    padding-top: 35px;
+    padding-bottom: 42px;
+  }
+  li:nth-child(2){
+    a{
+      background-position: -130px 30px;
+    }
+  }
+  li:nth-child(3){
+    a{
+      background-position: -162px 62px;
+    }
+  }
+  li:nth-child(4){
+    a{
+      background-position: -194px -34px;
+    }
+  }
+  li:nth-child(5){
+    a{
+      background-position: -290px -2px;
+    }
+  }
+  a{
+    width: 28px;
+    height: 28px;
+    background-image: url('../img/css_sprites.png');
+    background-position: -34px -2px;
+  }
+}
+.footer__copy-text{
+  line-height: 73px;
+  text-align: center;
+  color: #919699;
+  border-top: 1px solid #424d53;
+}
