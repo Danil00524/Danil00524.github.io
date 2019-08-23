@@ -1,0 +1,149 @@
+@import "vars";
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  align-items: center;
+}
+.header__items{
+  display: flex;
+  line-height: 16px;
+}
+
+.header__item-basket{
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+}
+
+.header__phone{
+  margin-left: auto;
+  font-weight: 500;
+  margin-right: 25px;
+  span{
+    color: $red;
+  }
+  a{
+    color: inherit;
+  }
+}
+.header__btn{
+  button,
+  a{
+  font-family: $roboto;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  line-height: 24px;
+  }
+  .header__login{
+    background-color: $green;
+    padding: 4px 19px;
+    margin-right: 6px;
+  }
+  .header__register{
+    background-color: $red;
+    padding: 4px 12px;
+  }
+  .header__logout{
+    background-color: $red;
+    padding: 4px 12px;
+    margin-left: 29px;
+  }
+}
+.header__item--active{
+  position: relative;
+  margin-right: 15px;
+  .header__icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;
+  }
+  .header__icon-circle,
+  .header__icon-circle-yeallow,
+  .header__icon-circle-red{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    font-size: 12px;
+    font-family: $sans;
+    font-weight: 600;
+  }
+}
+
+.header__item-basket{
+  .header__icon-circle{
+    background-color: $green;
+  }
+  .header__icon-circle-red{
+    background-color: #ef6c00;
+  }
+  .header__icon-circle-yeallow{
+    background-color: #fcb322;
+  }
+}
+
+.header__navigation{
+  background-color: #263238;
+  li{
+    display: inline-block;
+    & + li{
+      padding-left: 35px;
+    }
+  }
+  a{
+    color: #fff;
+    line-height: 60px;
+    font-family: $roboto;
+  }
+} 
+.profile{
+  img{
+    margin-left: 10px;
+    margin-right: 14px;
+    border-radius: 50%;
+  }
+  display: flex;
+  a{
+  display: flex;
+  flex-direction: column;
+  font-family: $roboto;
+  font-weight: 500;
+  font-size: 14px;
+  }
+  .profile__name{
+    line-height: 11px;
+    color: #222;
+    position: relative;
+    padding-bottom: 6px;
+    &:after{
+      content: "\f107";
+      font-family: "icomoon";
+      padding-left: 18px;
+      font-size: 16px;
+      color: #707070;
+      font-weight: 500;
+    }
+  }
+  .profile__money{
+  font-weight: 700;
+  font-family: $roboto;
+  color: #8bc34a;
+  }
+}

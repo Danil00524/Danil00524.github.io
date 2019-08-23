@@ -1,0 +1,133 @@
+@import "vars";
+
+body{
+  font-size: 15px;
+  line-height: 24px;
+  color: $text;
+  font-family: $roboto;
+}
+ul{
+	padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li{
+  margin: 0;
+  padding: 0;
+}
+a{
+	text-decoration: none;
+	display: inline-block;
+}
+.popup-login{
+  display: none;
+  max-width: 730px;
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $green;
+  padding: 75px 0 110px;
+}
+.popup-login__title{
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 35px;
+}
+.popup-login__form{
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  label{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    &:before{
+      position: absolute;
+      color: #fff;
+      font-size: 14px;
+      font-family: "icomoon";
+      top: 10px;
+      left: 15px;
+    }
+  }
+  input{
+    display: block;
+    width: 100%;
+    background-color: #76ae36;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-family: $roboto;
+    line-height: 36px;
+    padding: 4px 10px 4px 40px;
+    &::placeholder{
+      color: #fff;
+      font-family: $roboto;
+    }
+  }
+  .popup-login__name{
+    &:before{
+    content: "\f007";
+    }
+  }
+  .popup-login__password{
+    &:before{
+      content: "\f023";
+      }
+  }
+  button{
+    background-color: #fff;
+    padding: 16px 40px;
+    text-transform: uppercase;
+    color: black;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 2px solid #53951f;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+.popup-login__create{
+  padding: 11px 35px 16px 65px;
+  color: #fff;
+  font-size: 18px;
+  background-color: #76ae36;
+  margin-top: 9px;
+  position: relative;
+  &:before{
+    content: "\f044";
+    font-family: "icomoon";
+    top: 11px;
+    left: 35px;
+    position: absolute;
+  }
+}
+.popup-login__btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup-login__lost{
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+.fancybox-button svg {
+  display: none;
+ }
+.fancybox-slide--html .fancybox-close-small{
+  &:before{
+    content: "\f044";
+    font-family: "icomoon";
+    color: #fff;
+    font-weight: 500;
+  }
+}

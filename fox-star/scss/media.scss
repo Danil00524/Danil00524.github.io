@@ -1,0 +1,45 @@
+@media (max-width: 988px) {
+ .menu{
+   ul{
+     text-align: center;
+   }
+  a{
+     line-height: 40px;
+   }
+ }
+ .header__phone{
+   display: none;
+ }
+}
+@media (max-width: 760px) {
+  .header__btn .header__logout {
+    margin-left: 9px;
+  }
+  .profile .profile__name:after {
+    padding-left: 10px;
+  }
+  .profile img {
+    margin-left: 0px;
+    margin-right: 6px;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 548px){
+  .header__item-basket{
+    display: none;
+  }
+}
+@media (max-width: 548px){
+    .header__navigation li+li {
+    padding-left: 13px;
+  }
+  .breadcrumbs {
+    padding: 20px 0px 20px;
+  }
+}
+@media (max-width: 409px){
+  .profile__name,
+  .profile__money{
+   display: none;
+  }
+}
