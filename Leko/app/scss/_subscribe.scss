@@ -1,0 +1,43 @@
+@import "vars";
+
+.subscribe{
+  background-image: url('../img/subscribe-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  & > h5{
+    font-family: $playfair;
+    font-weight: 900;
+    font-size: 35px;
+    padding-top: 70px;
+    padding-bottom: 25px;
+    margin: 0;
+  }
+}
+
+.subscribe__form{
+  padding: 35px 0px 90px;
+  position: relative;
+  & > input{
+    background-color: #fff;
+    border-radius: 50px;
+    border: none; 
+    width: 500px;
+    padding: 15px 190px 15px 25px;
+    outline: none;
+  }
+  & > button{
+    position: absolute;
+    right: 280px;
+    background-color: #242428;
+    padding: 12px 35px 12px;
+    border: 1px solid transparent;
+    &:hover{
+      background-color: #413c3c;
+      border: 1px solid #24242b;
+      color: #bdbdc2;
+    }
+  }
+}

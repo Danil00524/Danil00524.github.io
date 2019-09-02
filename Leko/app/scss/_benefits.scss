@@ -1,0 +1,40 @@
+@import "vars";
+.benefits {
+  text-align: center;
+  color: #fff;
+  background-image: url('../img/benefits-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  & > h3{
+    font-family: $playfair;
+    font-weight: 900;
+    font-size: 36px;
+    margin: 0;
+    padding-top: 76px;
+    padding-bottom: 30px;
+  }
+}
+
+.benefits__inner{
+  padding-top: 65px;
+  display: flex;
+}
+
+.benefits__item{
+  margin-bottom: 30px;
+  padding: 0px 15px;
+  & > h4{
+    font-size: 24px;
+    font-weight: 900;
+  }
+}
+
+.benefits__btn{
+  margin-top: 30px;
+  margin-bottom: 100px;
+  border: 1px solid transparent;
+  &:hover{
+    border: 1px solid $grey;
+  }
+}

@@ -1,0 +1,121 @@
+@import "vars";
+
+.lessons{
+  background-image: url('../img/lesson-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  & > h2{
+    margin: 0;
+    padding-top: 150px;
+    padding-bottom: 35px;
+    font-size: 46px;
+    font-family: $playfair; 
+    font-weight: 900;
+    color: #3f3f48;
+  }
+  & > span{
+    color: $grey;
+  }
+}
+
+.lessons__inner{
+  padding-top: 30px;
+  padding-bottom: 50px;
+  display: flex;
+  & > img{
+    width: 750px;
+    height: 430px;
+    box-shadow: 0px 1px 16px 3px rgba(0,0,0,0.23);
+  }
+}
+
+.lessons_wrapper{
+  width: 360px;
+  text-align: left;
+  padding-left: 30px;
+  & > h2{
+    color: #3f3f48;
+    font-family: $playfair;
+    font-weight: 900;
+    font-size: 24px;
+    margin: 20px 0px 23px;
+  }
+  & > p{
+    line-height: 21px;
+    color: #03080c
+  }
+}
+
+.lessons__line{
+  background-color: $red;
+  height: 7px;
+  width: 35px;
+  margin-top: 70px;
+}
+
+.lessons__price{
+  display: flex;
+  flex-direction: column;
+  color: $grey;
+  padding: 30px 0px 20px;
+  & span{
+    padding: 18px 0px 20px;
+    color: #3f3f48;
+    font-size: 32px;
+    font-weight: 900;
+  }
+}
+
+.lessons__go{
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid $red;
+  color: $red;
+}
+
+.lessons__btns{
+  padding-bottom: 90px;
+  & button{
+    background-color: #fff;
+    color: $maincolor;
+    border: 1px solid $grey;
+    margin-bottom: 20px;
+  }
+  & button + button{
+    margin-left: 10px;
+  }
+  & button:hover{
+    background-color: $maincolor;
+    transition: all .4s;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+}
+
+.lessons__see-all{
+  text-align: right;
+  padding-bottom: 120px;
+  & a{
+    line-height: 30px;
+    font-family: $playfair;
+    font-weight: 900;
+    font-size: 21px;
+    text-transform: uppercase;
+    border-bottom: 1px solid $maincolor;
+    color: $maincolor;
+    &:after{
+      content: '\f101';
+      font-family: 'icomoon';
+      padding-left: 5px;
+      padding-bottom: 2px;
+    }
+    &:hover{
+      color: #03080c;
+      border-bottom: 1px solid #03080c;
+      transition: all .4s;
+    }
+  }
+}

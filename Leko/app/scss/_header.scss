@@ -1,0 +1,147 @@
+@import "vars";
+
+body .header{
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: flex;
+}
+.header__inner{
+  width: 100%;
+  padding-left: 90px;
+}
+.header__top{
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid #f3f3f8;
+  padding-bottom: 4px;
+}
+.header__email{
+  color: $grey;
+  padding-right: 50px;
+  & > a{
+    color: $maincolor;
+  }
+}
+.header__top_icon a{
+  padding: 2px 4px 0px 4px;
+  border-radius: 50%;
+  color: #7e7e84;
+  & + a{
+    margin-left: 20px;
+  }
+  &:hover{
+    color: #fff;
+    background-color: $maincolor;
+    transition: all .4s;
+  }
+}
+.header__bottom{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 16px;
+}
+.header__bottom_icon{
+  padding-right: 30px;
+  & > span{
+    padding-right: 10px;
+  }
+}
+.menu{
+  padding-right: 30px;
+}
+.menu ul li{
+  font-size: 16px;
+  color: #3f3f48;
+  display: inline-block;
+  & > a:hover{
+    transition: all .4s;
+    color: $red;
+  }
+  & + li{
+    padding-left: 40px;
+  }
+}
+
+.header__bottom_login,
+.header__bottom_register{
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: #39c2d8;
+  color: #fff;
+  &:hover{
+    background-color: $red;
+    transition: all .4s;
+  }
+}
+.header__bottom_login{
+  margin-right: 10px;
+}
+
+body .home{
+  box-shadow: 1px -2px 14px -2px rgba(0,0,0,0.42);
+  background-image: url('../img/home-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 120px;
+  padding-bottom: 210px;
+  position: relative;
+  & > p{
+    font-size: 15px;
+    padding-bottom: 18px;
+    width: 500px;
+  }
+  & > h1{
+    font-weight: 900;
+    font-size: 74px;
+    color: #3f3f48;
+    font-family: $playfair;
+    margin-top: 18px;
+    margin-bottom: 30px;
+    width: 500px;
+    line-height: 50px;
+  }
+}
+
+.home__action{
+  color: #777785;
+}
+
+.home__present{
+  color: $maincolor;
+}
+
+.home__btn{
+  margin-top: 30px;
+  border: 1px solid transparent;
+  &:hover{
+    background-color: #fff;
+    color: $maincolor;
+    transition: all .4s;
+    border: 1px solid $grey;
+  }
+}
+
+.home__box-sale{
+  width: 225px;
+  height: 225px;
+  border-radius: 100%;
+  background-color: $red;
+  position: absolute;
+  bottom: 90px;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  & > h2{
+    font-size: 70px;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

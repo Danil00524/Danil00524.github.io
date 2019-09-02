@@ -1,0 +1,53 @@
+@import "vars";
+
+*{
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  width: auto;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container{
+  padding: 0 15px;
+}
+
+
+body{
+  color: #03080c;
+  font-family: $roboto;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.btn{
+  cursor: pointer;
+  outline: none;
+  background-color: $maincolor;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  padding: 15px 45px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  &:hover{
+    background-color: #fff;
+    color: $maincolor;
+    transition: all .4s;
+  }
+}
