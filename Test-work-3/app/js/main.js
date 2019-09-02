@@ -17,18 +17,3 @@ var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</s
 msg = '<span class="msg">Hidden input value: ';
 $('.msg').html(msg + input + '</span>');
 }); 
-
-$('.add-project__button-cancel').click(function() {
-  $('.add-project__button-cancel').css({
-      'background-color': '#112a42',
-      'color': '#fff',
-      'border': '2px solid #112a42',
-  });
-});
-
-$('.add-project__button-add').click(function() {
-  $('.add-project__button-add').css({
-      'background-color': '#c1c1be',
-      'color': '#fff',
-  });
-});
