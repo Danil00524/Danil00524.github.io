@@ -1,0 +1,138 @@
+.main-wrapper {
+    height: 100vh;
+    position: relative;
+    & .scroll {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & .text {
+            padding-right: 15px;
+        }
+        & .img:hover {
+            transition: all .4s;
+            cursor: pointer;
+        }
+    }
+}
+.parallax {
+    background: svg-load('../content/parallax.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    padding-top: 50px;
+    & .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .logo {
+            font-size: 36px;
+            font-weight: 900;
+        }
+        & .menu__inner {
+            display: flex;
+            & .menu__item {
+                text-decoration: none;
+                margin-left: 55px;
+            }
+        }
+        & .social {
+            display: flex;
+            & .icon-bg {
+                margin-left: 38px;
+            }
+        }
+    }
+}
+
+.home {
+    & .inner {
+        position: absolute;
+        top: 60%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        & .text {
+            font-size: 18px;
+            text-align: right;
+            max-width: 230px;
+            font-weight: 600;
+            padding-right: 50px;
+            color: $text-color;
+        }
+        & .title {
+            font-weight: 800;
+            font-size: 72px;
+            max-width: 450px;
+            line-height: 53px;
+        }
+    }
+}
+
+.profile-top {
+    padding-top: 130px;
+    & .wrapper {
+        display: flex;
+        justify-content: center;
+        & .photo {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 0px 150px 0px 70px;
+        }
+        & .inner {
+            max-width: 530px;
+            & .welcome {
+                font-size: 16px;
+                font-weight: 600;
+                color: $text-color;
+            }
+            & .name {
+                font-size: 36px;
+                font-weight: 900;
+                padding: 15px 0 30px;
+            }
+            & .description {
+                font-weight: 600;
+                font-size: 16px;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+.profile-bottom {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    & .wrapper {
+        display: flex;
+        justify-content: center;
+        & .profile-description {
+            padding-right: 150px;
+            display: flex;
+            & .specifications, .values {
+                display: flex;
+                flex-direction: column;
+            }
+            & .specification {
+                color: #3c3e41;
+                padding-right: 100px;
+                padding-bottom: 15px;
+            }
+            & .value {
+                text-align: left;
+                padding-bottom: 15px;
+            }
+        }
+        & .text {
+            font-family: 'Open Sans', Helvetica, italic;
+            max-width: 550px;
+            font-size: 16px;
+            color: $text-color;
+        }
+    }
+}
