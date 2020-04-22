@@ -10,6 +10,7 @@ module.exports = {
     require("autoprefixer")({
       cascade: false
     }),
+    require('postcss-url')({ url: 'rebase' }),
     require("postcss-advanced-variables")({
       variables: JSON.parse(
         fs.readFileSync("./src/styles/variables.json", "utf-8")

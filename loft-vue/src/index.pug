@@ -14,24 +14,8 @@ html(lang="en")
           .container
             .wrapper
               span.logo DP
-              nav.menu
-                ul.menu__inner
-                  li
-                    a(href="#").menu__item.link Главная
-                  li
-                    a(href="#").menu__item.link Обо мне
-                  li
-                    a(href="#").menu__item.link Навыки
-                  li
-                    a(href="#").menu__item.link Работы
-                  li
-                    a(href="#").menu__item.link Отзывы
-                  li
-                    a(href="#").menu__item.link Связаться
-              .social
-                .icon-bg.social-insta
-                .icon-bg.social-vk
-                .icon-bg.social-github
+              +menu()
+              +social()
         section.home
           .inner
             span.text Личный сайт веб разработчика
@@ -60,6 +44,65 @@ html(lang="en")
                 span.value 20
                 span.value 4 января 2000
             em.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    section.skills
+      +image('content/hands.png', 'hands')
+      .container
+        .wrapper
+          h4.main-title Чем я могу быть полезен вам
+          p.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          .skills__item
+            h5.title Front-End
+            .skills__inner
+              .technology__inner
+                span.gradient
+                span.technology HTML5
+              .technology__inner
+                span.gradient
+                span.technology CSS3
+              .technology__inner
+                span.gradient
+                span.technology JavaScript
+              .technology__inner
+                span.gradient
+                span.technology jQuery и Vue.js
+          .skills__item
+            h5.title Workflow
+            .skills__inner
+              .technology__inner
+                span.gradient
+                span.technology GIT
+              .technology__inner
+                span.gradient
+                span.technology Terminal
+              .technology__inner
+                span.gradient
+                span.technology Gulp
+              .technology__inner
+                span.gradient
+                span.technology Webpack
+    section.footer
+      .container
+        .wrapper
+          span.corporation © 2019
+          .user-info__inner
+            h4.name Позняков Данил
+            p.text Личный сайт веб-разработчика
+          .footer__inner
+            +menu()
+            .epilog
+              div
+                p.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool
+                +social()
+              .author
+                p.text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете.
+                em.user-name Poznyakov Danil
+
+
+
+
+
+
+
 
 
 
