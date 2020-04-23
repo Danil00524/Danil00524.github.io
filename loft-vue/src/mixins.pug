@@ -5,28 +5,3 @@ mixin icon(name, className)
 
 mixin image(path, className)
   img(src=require(`images/${path}`) class=className)
-
-mixin social()
-  .social
-    div.inner
-      .icon-bg.social-insta
-    div.inner
-      .icon-bg.social-vk
-    div.inner
-      .icon-bg.social-github
-
-mixin menu()
-  nav.menu
-    ul.menu__inner
-      li
-        a(href="#").menu__item.link Главная
-      li
-        a(href="#").menu__item.link Обо мне
-      li
-        a(href="#").menu__item.link Навыки
-      li
-        a(href="#").menu__item.link Работы
-      li
-        a(href="#").menu__item.link Отзывы
-      li
-        a(href="#").menu__item.link Связаться

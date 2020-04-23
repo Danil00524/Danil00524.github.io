@@ -1,0 +1,68 @@
+.skills {
+    background-image: url('../../images/content/skill-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+.skills__hands {
+    position: absolute;
+    bottom: -60px;
+    height: 960px;
+    width: 665px;
+}
+
+.skills__inner {
+    padding: 145px 0 145px 500px;
+    margin-top: -5px;
+}
+
+.skills__title {
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 50px;
+}
+
+.skills__text {
+    font-weight: 600;
+    padding-bottom: 90px;
+    max-width: 640px;
+    color: $text-color;
+}
+
+.skills__item {
+    padding-left: 127px;
+    padding-bottom: 40px;
+    .title {
+        font-size: 24px;
+        font-weight: 900;
+        padding-bottom: 40px;
+    }
+    .skills__content {
+        display: flex;
+        justify-content: space-between;
+        .skills__technology {
+            position: relative;
+            .gradient {
+                position: absolute;
+                border: 8px solid rgb(255,156,0);
+                border-radius: 50%;
+                width: 130px;
+                height: 130px;
+            }
+            .technology {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: 4px solid #403f3f;
+                border-radius: 50%;
+                width: 130px;
+                height: 130px;
+                font-size: 18px;
+                font-weight: 900;
+                color: $text-color;
+            }
+        }
+    }
+}

@@ -30,7 +30,6 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
 
   @include phones {
     width: 85%;
@@ -88,7 +87,13 @@ img {
   max-height: 100%;
 }
 
-.link:hover {
-  color: red;
-  transition: all .4s;
+.link {
+  cursor: pointer;
+  fill: #fff;
+  color: #fff;
+  &:hover {
+    color: red;
+    fill: red;
+    transition: all .4s;
+  }
 }
