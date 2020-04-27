@@ -1,0 +1,12 @@
+.sidebar-root {
+  .sidebar {
+    width: 720px;
+    padding: 32px;
+    background-color: $colorWhite;
+    z-index: 200 !important;
+  }
+
+  .sidebar-overlay {
+    z-index: 100 !important;
+  }
+}

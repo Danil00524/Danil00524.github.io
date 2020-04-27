@@ -1,0 +1,41 @@
+.search-salon-input {
+    position: relative;
+
+    &__salons {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #fff;
+        overflow: auto;
+        height: 300px;
+        padding: 0 10px;
+        border: 1px solid #DBDBDB;
+        border-radius: 5px;
+
+        &--empty {
+            text-align: center;
+            height: unset;
+            padding: 10px;
+        }
+
+        img {
+            width: 90px;
+        }
+
+        h3 {
+            font-size: 14px;
+            word-break: break-all;
+        }
+    }
+
+    &__salon {
+        padding: 10px 0;
+
+
+        & + & {
+            border-top: 1px solid #DBDBDB;
+        }
+    }
+}

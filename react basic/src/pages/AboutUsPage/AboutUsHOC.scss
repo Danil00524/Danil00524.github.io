@@ -1,0 +1,34 @@
+@import "../../styles/core/settings";
+
+.about-us-page {
+  .our-team-section {
+    padding-top: 30px;
+    .container{
+      padding: 0 24px;
+    }
+    .title-xxl {
+      margin-bottom: 50px;
+    }
+
+    .tabs-control {
+      margin-bottom: 72px;
+      .control-list{
+        @media (max-width: 578px){
+          margin: 0 -24px 0;
+        }
+      }
+
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 75px;
+      background-color: $colorWhite;
+      z-index: 0;
+    }
+  }
+}

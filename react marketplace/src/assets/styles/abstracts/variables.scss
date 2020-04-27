@@ -1,0 +1,33 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+// ========== VARIABLES FONTS START ========== //
+// ------ Fonts ------
+$default-font-family: 'Proxima Nova Regular';
+$font-basic-size: 16px;
+$extra-bold: 'Proxima Nova Extrabld';
+$bold: 'Proxima Nova Bold';
+$light: 'Proxima Nova Lite';
+
+// ------ Colors ------
+$primary-font-color: #7F7F7F;
+$primary-white: #fff;
+$blue-font: #04AAE6;
+$light-blue: #0099FF;
+$grey-font: #999999;
+
+// ------ Gradients ------
+$blue-gradient: linear-gradient(to right, #00A8E9, #4164A4);
+
+// bootstrap variables for forms
+$input-height: 42px;
+$input-padding-y: 0;
+$input-padding-x: 20px;
+$input-line-height: 42px;
+$input-border-color: #DBDBDB;
+
+$form-group-margin-bottom: 0;
+
+// btn
+$btn-padding-y: 12px;
+$btn-border-width: 0;

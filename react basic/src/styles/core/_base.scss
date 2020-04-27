@@ -1,0 +1,42 @@
+// ========== BASE START ========== //
+body {
+   font: $fontBasicWeight #{$fontBasicSize}/#{$fontBasicLineHeight} $fontBasic;
+   color: $colorLightBrown;
+   background-color: $colorWhite;
+}
+
+::selection {
+  color: $colorWhite;
+  background-color: $colorLightBrown;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.link {
+  font-family: $fontSuisseIntl;
+  font-size: 14px;
+  color: $colorBlackGray;
+  line-height: 1;
+  border-bottom: 1px solid $colorBlackGray;
+  @include transition(color, border-bottom-color);
+
+  &:hover {
+    color: $colorAccess;
+    border-bottom-color: $colorAccess;
+  }
+}
+
+.container {
+  @include media-breakpoint-down(lg) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+// ========== BASE END ========== //

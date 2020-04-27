@@ -1,0 +1,22 @@
+.accordion {
+  @include transition(height .5s, opacity .3s);
+  opacity: 1;
+  transition-delay: 0s, .2s;
+
+  &.collapsed {
+    opacity: 0;
+    transition-delay: 0s, 0s;
+  }
+}
+
+.accordion-big {
+  @include transition(height .7s, opacity .5s);
+  opacity: 1;
+  transition-delay: 0s, 0s;
+
+  &.collapsed {
+    opacity: 0;
+    transition-delay: 0s, 0s;
+  }
+}
+

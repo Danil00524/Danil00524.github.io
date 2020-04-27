@@ -1,0 +1,34 @@
+@import "../../styles/core/settings";
+@import '../../styles/core/mixins';
+
+.socials-block {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  .nav-list {
+    .list-link {
+      min-height: 20px;
+      padding: 10px 20px;
+
+      svg {
+        @include transition(fill);
+      }
+
+      &:hover {
+        svg {
+          fill: $colorAccess;
+        }
+      }
+    }
+  }
+  
+  &.black-icons {
+    .nav-list {
+      .list-link {
+        svg {
+          fill: $colorDarkBrown;
+        }
+      }
+    }
+  }
+}

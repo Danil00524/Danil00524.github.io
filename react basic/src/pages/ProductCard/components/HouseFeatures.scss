@@ -1,0 +1,34 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/grid/breakpoints";
+
+.house-features {
+  max-width: 850px;
+  overflow: hidden;
+
+  .house-features-list {
+    margin-right: -1px;
+
+    .house-features-item {
+      width: 20%;
+      padding: 15px 15px;
+      border-right: 1px solid rgba($colorWhite, .2);
+  
+      @include media-breakpoint-down(lg) {
+        width: 25%;
+      }
+  
+      @include media-breakpoint-down(sm) {
+        width: 50%;
+      }
+      
+      &:last-child {
+        border-right: 1px solid transparent;
+      }
+
+      .item-icon {
+        height: 36px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

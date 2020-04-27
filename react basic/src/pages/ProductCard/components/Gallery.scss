@@ -1,0 +1,123 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/core/mixins";
+@import "../../../styles/grid/breakpoints";
+
+.product-card-slider-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 0;
+  
+  @include media-breakpoint-down(lg) {
+    position: absolute;
+    height: 522px;
+  }
+  
+  @include media-breakpoint-down(xs) {
+    height: 400px;
+  }
+}
+.product-card-slider {
+  max-height: 100vh;
+  height: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba($colorBlack, .7) 0%, rgba($colorBlack, 0) 25%, rgba($colorBlack, 0) 70%, rgba($colorBlack, .7) 100%);
+    z-index: 1;
+  }
+
+  .slick-list,
+  .slick-track,
+  .slick-slide > div {
+    height: 100%;
+  }
+
+  .slick-track {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+
+  .slick-slide {
+    overflow: hidden;
+
+    .slide {
+      transform: scale(1.5);
+      transform-origin: 50% 50%;
+      @include transition(transform 1s);
+    }
+
+    &.slick-current {
+      .slide {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.product-card-slider-nav {
+  height: 60px;
+  width: 550px;
+  margin: 0 auto;
+  text-align: center;
+
+  .slick-list {
+    .slick-slide {
+      opacity: .5;
+      cursor: pointer;
+      @include transition(opacity 1s);
+
+      & > div {
+        display: flex;
+        justify-content: center;
+      }
+
+      .slide {
+        max-width: 60px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 5px;
+        @include transition(max-width 1s, background-color 1s);
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &.slick-current {
+        opacity: 1;
+
+        .slide {
+          max-width: 90px;
+        }
+      }
+
+      &:not(.slick-current):hover {
+        opacity: .75;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,148 @@
+@import '../abstracts/variables.scss';
+
+.products-header {
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  padding: 25px 0;
+  transition: none;
+  box-shadow: none;
+
+  .slicknav_nav {
+    overflow: unset;
+
+    span.dropdown {
+      padding: 5px 10px;
+      margin: 2px 5px;
+    }
+
+    .dropdown-content {
+      ul {
+        margin: 0;
+      }
+      a {
+          padding: 0;
+          margin: 0;
+          color: #666;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .products-nav {
+
+    a {
+      opacity: 1;
+
+      &.active, &:active, &:hover {
+        color: $primary-white;
+      }
+
+      &.active {
+        font-family: $extra-bold, sans-serif;
+      }
+
+      &:active, &:hover {
+        opacity: 0.8;
+      }
+
+      & + a {
+        margin-left: 50px;
+      }
+
+      
+    }
+
+    .bottom-bar {
+      
+      .dropdown-content {
+        width: 200px;
+
+        li {
+          & + li {
+            margin-top: 10px;
+          }
+        }
+        a {
+          color: #666;
+        }
+      }
+    }
+
+    .top-bar {
+      border-bottom: 1px solid $primary-white;
+    }
+
+    .slicknav_menu {
+      display: none;
+
+      @media (max-width: 991px) {
+        display: block;
+      }
+    }
+
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+  }
+
+  .select-title {
+    font-size: 16px;
+  }
+
+  .dropdown {
+    cursor: pointer;
+
+    .current-country-image {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .header-right-menu {
+    @media (max-width: 575px) {
+      order: 1;
+      flex-direction: column !important;
+      flex-basis: 100%;
+    }
+
+    .buttons-container {
+      justify-content: flex-end;
+
+      @media (max-width: 991px) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &.scroll {
+
+    .products-nav a, .products-nav span, .select-title {
+      color: #666;
+    }
+
+    nav {
+
+      .top-bar {
+        border-bottom: 1px solid #666;
+      }
+
+      span, a {
+
+        &.active, &:hover {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+}

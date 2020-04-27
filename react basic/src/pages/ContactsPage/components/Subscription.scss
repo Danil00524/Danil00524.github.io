@@ -1,0 +1,124 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/core/mixins";
+@import "../../../styles/grid/breakpoints";
+
+@include media-breakpoint-down(xs) {}
+
+.subscription-section {
+  padding-top: 48px;
+  padding-bottom: 130px;
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 88px;
+
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 32px;
+
+    .breadcrumbs {
+      display: none !important;
+    }
+  }
+
+  .title-lg {
+    margin-bottom: 8px;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .title-main {
+    max-width: 650px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .subscription-form {
+    max-width: 670px;
+
+    .form-group {
+      margin-bottom: 24px;
+
+      @include media-breakpoint-down(xs) {
+        display: block !important;
+      }
+
+      .input-group:first-child {
+        margin-right: 12px;
+
+        @include media-breakpoint-down(xs) {
+          margin-bottom: 24px;
+          width: 100% !important;
+        }
+      }
+
+      .input-group:last-child {
+        margin-left: 12px;
+
+        @include media-breakpoint-down(xs) {
+          margin-left: 0px;
+          width: 100% !important;
+        }
+      }
+    }
+
+    .input-group,
+    .textarea-group {
+      padding: 6px 24px;
+      border-radius: $borderRadius;
+      position: relative;
+
+      .group-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F6F6F6;
+        border: 1px solid transparent;
+        border-radius: $borderRadius;
+        z-index: 0;
+        @include transition(border-color);
+      }
+
+
+      &:hover {
+        .group-bg {
+          border-color: $colorLightGray;
+        }
+      }
+
+      input:focus~.group-bg,
+      textarea:focus~.group-bg {
+        border-color: $colorAccess;
+      }
+    }
+
+    .textarea-group {
+      margin-bottom: 32px;
+
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 24px;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: none;
+      }
+    }
+  }
+}

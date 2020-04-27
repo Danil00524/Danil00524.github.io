@@ -1,0 +1,45 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/core/mixins";
+
+.contacts-page {
+  .modal {
+    max-width: 480px;
+    padding: 15px 15px 35px 15px;
+
+    .close {
+      .close-icon {
+        @include transition(fill);
+
+        &:hover {
+          fill: $colorAccess;
+        }
+      }
+    }
+
+    .icon {
+      margin-bottom: 16px;
+    }
+
+    .title {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media(max-width: 375px) {
+  .popup-content {
+    width: 95% !important;
+
+    .modal {
+      padding: 10px 15px 20px 15px;
+
+      .icon {
+        margin-bottom: 10px;
+      }
+
+      .title {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

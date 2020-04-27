@@ -1,0 +1,28 @@
+@import '../../../assets/styles/abstracts/variables.scss';
+
+.user-btn {
+    position: relative;
+
+    .simple-btn {
+        border-radius: 5px;
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        padding: 5px 10px;
+        right: 0;
+        margin-top: 10px;
+        width: 200px;
+        border-radius: 5px;
+        background-color: #fff;
+
+        a {
+            padding: 5px;
+        }
+
+        a + a {
+            border-top: 1px solid $blue;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.blog-page-hero-section {
+  padding-top: 45px;
+
+  .title-lg {
+    margin-bottom: 8px;
+  }
+
+  .title-main {
+    max-width: 690px;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .blog-page-hero-section {
+    .title.title-main {
+      max-width: 515px!important;
+      margin-bottom: 24px!important;
+      font-size: 36px!important;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .blog-page-hero-section {
+    .title-lg {
+      margin-bottom: 16px!important;
+    }
+    .title.title-main {
+      max-width: 304px!important;
+      margin-bottom: 32px!important;
+      font-size: 32px!important;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import "../../../styles/core/settings";
+@import '../../../styles/core/mixins';
+@import "../../../styles/grid/breakpoints";
+
+.footer {
+  .footer-top {
+    padding-top: 55px;
+    padding-bottom: 60px;
+    .row{
+      @media (max-width: 578px){
+        flex-direction: column;
+      }
+      .col-5{
+        @media (max-width: 578px){
+          flex:initial;
+          max-width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+      .contact-holder{
+
+        @media (max-width: 768px){
+          width: auto;
+          margin-left: auto;
+        }
+        @media (max-width: 578px){
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    .subscribe {
+      max-width: 380px;
+      @media (max-width: 768px){
+        max-width: 100%;
+      }
+
+      .title {
+        margin-bottom: 10px;
+      }
+
+      .subscribe-text {
+        margin-bottom: 32px;
+        opacity: .5;
+      }
+
+      .form-group {
+        label {
+          opacity: .5;
+        }
+
+        .form-control {
+          margin-bottom: 32px;
+          border-bottom: 1px solid rgba($colorWhite, .6);
+        }
+      }
+    }
+
+    .navigation {
+      .title {
+        margin-bottom: 16px;
+      }
+
+      .navbar {
+        .nav-list {
+          .list-item-link {
+            display: block;
+            padding: 8px 0;
+            font-size: 16px;
+            color: rgba($colorWhite, .5);
+            @include transition(color);
+
+            &.active {
+              color: $colorWhite;
+            }
+
+            &:not(.active):hover {
+              color: $colorAccess;
+            }
+          }
+        }
+      }
+    }
+
+    .contacts {
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+      
+      .socials-block {
+        @include media-breakpoint-down(sm) {
+          margin: 0 auto;
+        }
+        
+        .nav-list {
+          .list-link {
+            svg {
+              fill: rgba($colorWhite, .3);
+            }
+
+            &:hover {
+              svg {
+                fill: $colorAccess;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding: 32px 0;
+    border-top: 1px solid rgba($colorWhite, .1);
+    @media (max-width: 578px){
+      display: none;
+    }
+    .container{
+      @media (max-width: 768px){
+        flex-direction: column;
+      }
+    }
+    .logo {
+      @media (max-width: 768px){
+        margin-bottom: 10px;
+      }
+      svg {
+        width: 148px;
+        fill: $colorWhite;
+      }
+    }
+
+    .copyrights {
+      opacity: .3;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/core/mixins";
+
+.share-on-socials {
+
+  .btn-share {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $colorWhite;
+    @include transition(background-color);
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &.share-tw {
+      background-color: #55ACEE;
+    }
+
+    &.share-fb {
+      background-color: #3B5998;
+    }
+
+    &.share-vk {
+      background-color: #4C6C91;
+    }
+
+    &:hover {
+      &.share-tw {
+        background-color: rgba(#55ACEE, .8);
+      }
+
+      &.share-fb {
+        background-color: rgba(#3B5998, .8);
+      }
+
+      &.share-vk {
+        background-color: rgba(#4C6C91, .8);
+      }
+    }
+  }
+}

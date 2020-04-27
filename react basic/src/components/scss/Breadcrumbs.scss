@@ -1,0 +1,32 @@
+.breadcrumbs {
+  margin-bottom: 50px;
+
+  .link {
+    font-size: 16px;
+  }
+
+  .current-select {
+    &::before {
+      content: '/';
+      margin-left: 14px;
+      margin-right: 16px;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  section.blog-open-content-section{
+    .breadcrumbs{
+margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumbs.d-flex.align-items-center.d-flex.justify-content-center{
+    display: none!important;
+  }
+}

@@ -1,0 +1,16 @@
+.our-team-container {
+  min-height: 490px;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -32px;
+  padding: 0 30px;
+  @media (max-width: 991px){
+    margin-right: -75px;
+    margin-left: -75px;
+  }
+  @media (max-width: 768px){
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../../styles/core/settings";
+@import '../../../../styles/core/mixins';
+
+.projects-section {
+  padding: 100px 0;
+  @media (max-width: 991px){
+    padding: 50px 0;
+  }
+
+  .projects-info {
+    margin-bottom: 118px;
+    @media (max-width: 991px){
+      margin-bottom: 60px;
+    }
+
+    .title {
+      max-width: 740px;
+      margin-bottom: 14px;
+    }
+
+    .text {
+      max-width: 600px;
+    }
+  }
+
+  .projects-items {
+    margin-left: -18px;
+    margin-right: -18px;
+    @media (max-width: 991px){
+      flex-wrap: wrap;
+    }
+    .aside-item-link{
+      margin-right: 0;
+    }
+    .item-wrapper {
+      width: 33.3333%;
+      padding-left: 18px;
+      padding-right: 18px;
+      @media (max-width: 768px){
+        width: 100%;
+      }
+
+      .aside-item {
+        .item-img {
+          img {
+            height: 252px;
+          }
+        }
+      }
+    }
+  }
+}

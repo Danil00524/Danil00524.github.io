@@ -1,0 +1,107 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/grid/breakpoints";
+
+.service-our-services-section {
+  @include media-breakpoint-down(md) {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .service-item {
+    width: 50%;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 24px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+
+    .item-content {
+      padding: 32px 48px;
+      border-radius: $borderRadius;
+
+      @include media-breakpoint-down(md) {
+        padding: 32px;
+      }
+
+      .info-top {
+        margin-bottom: 24px;
+
+        .info-title {
+          margin-bottom: 16px;
+
+          @include media-breakpoint-down(md) {
+            margin-bottom: 24px;
+          }
+
+          .title-xl {
+            font-size: 26px;
+
+            @include media-breakpoint-down(md) {
+              max-width: 194px;
+            }
+
+            @include media-breakpoint-down(sm) {
+              max-width: 400px;
+            }
+
+            @include media-breakpoint-down(xs) {
+              max-width: 194px;
+            }
+          }
+        }
+      }
+
+      .info-bottom {
+        .title-lg {
+          margin-bottom: 8px;
+
+          @include media-breakpoint-down(md) {
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 375px) {
+//   .service-our-services-section {
+//     .container {
+//       padding-left: 0px;
+//       padding-right: 0px;
+//     }
+//   }
+
+//   .service-item {
+//     width: 100%;
+
+//     .item-content {
+//       padding: 32px;
+
+//       .info-top .info-title {
+//         margin-bottom: 24px;
+
+//         h3.title.title-xl {
+//           max-width: 194px;
+//         }
+//       }
+
+//       .info-bottom .title-lg {
+//         font-size: 21px;
+//       }
+//     }
+//   }
+// }

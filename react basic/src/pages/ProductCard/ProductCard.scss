@@ -1,0 +1,21 @@
+@import "../../styles/core/settings";
+@import "../../styles/grid/breakpoints";
+
+.product-card-page {
+  @include media-breakpoint-down(xl) {
+    background-color: $colorWhite;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 60px;
+  }
+  
+  .footer {
+    z-index: 5;
+  
+    @include media-breakpoint-down(xl) {
+      z-index: initial;
+    }
+  }
+}
+

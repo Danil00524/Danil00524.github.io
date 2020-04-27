@@ -1,0 +1,57 @@
+@import "../../../styles/core/settings";
+
+.about-us-hero-section {
+  min-height: 880px;
+  background-image: url('../../../img/about-us-bg.jpg');
+  @media (max-width: 991px){
+    min-height: 620px;
+  }
+  @media (max-width: 768px){
+    min-height: 520px;
+  }
+  .container{
+    @media (max-width: 991px){
+      display: none;
+    }
+  }
+
+  .title-info {
+    padding: 45px 0px 0;
+    mix-blend-mode: lighten;
+    @media (max-width: 768px){
+      padding: 30px 10px 0;
+    }
+
+    .title-lg {
+      margin-bottom: 8px;
+    }
+
+    .title-main {
+      max-width: 870px;
+      margin-bottom: 30px;
+      @media (max-width: 768px){
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .bottom-bg {
+    height: 100px;
+    @media (max-width: 991px){
+      display: none !important;
+    }
+
+    .advantages-section {
+      position: absolute;
+      bottom: 50px;
+      margin-bottom: 0;
+      padding: 33px;
+      border-radius: $borderRadius;
+      @media (max-width: 991px){
+        display: none;
+      }
+
+    }
+  }
+}

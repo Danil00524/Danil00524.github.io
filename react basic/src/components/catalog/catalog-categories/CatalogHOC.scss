@@ -1,0 +1,34 @@
+@import "../../../styles/core/settings";
+@import '../../../styles/core/mixins';
+
+.hero-section {
+  padding-top: 45px;
+
+  .section-control {
+    .title-lg {
+      margin-bottom: 8px;
+    }
+
+    .title-main {
+      max-width: 920px;
+      margin-bottom: 30px;
+    }
+
+    .tabs-control {
+      margin-bottom: 40px;
+    }
+  }
+
+  .section-content {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background-color: $colorWhite;
+      z-index: 0;
+    }
+  }
+}

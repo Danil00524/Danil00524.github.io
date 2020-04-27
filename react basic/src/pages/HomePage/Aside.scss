@@ -1,0 +1,261 @@
+@import "../../styles/core/settings";
+@import '../../styles/core/mixins';
+@import "../../styles/grid/breakpoints";
+
+
+.aside-wrapper {
+  overflow-x: hidden;
+  
+  @include media-breakpoint-down(lg) {
+    overflow-x: initial;
+  }
+}
+
+.aside {
+  width: 366px;
+  overflow-y: auto;
+  @include transition(width);
+  
+  @include media-breakpoint-down(xl) {
+    width: 336px;
+  }
+  
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  .aside-content {
+    padding: 20px 20px 40px;
+  
+    @include media-breakpoint-down(lg) {
+      padding-top: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .categories {
+      padding-bottom: 40px;
+  
+      @include media-breakpoint-down(lg) {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+  
+      @include media-breakpoint-down(xs) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+  
+      .aside-item-link {
+        @include media-breakpoint-down(lg) {
+          width: 33.33333%;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+  
+        @include media-breakpoint-down(xs) {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        
+        .aside-item {
+          .item-img {
+            @include media-breakpoint-down(lg) {
+              &,
+              img {
+                height: 156px;
+              }
+            }
+  
+            @include media-breakpoint-down(xs) {
+              &,
+              img {
+                height: 189px;
+              }
+            }
+          }
+  
+          .item-info .title {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .blog {
+      padding-top: 8px;
+
+      & > .title {
+        margin-bottom: 10px;
+      }
+  
+      .aside-item-link {
+        @include media-breakpoint-down(lg) {
+          width: 50%;
+        }
+  
+        @include media-breakpoint-down(xs) {
+          width: 100%;
+        }
+    
+        .aside-item {
+          &.item-mini {
+            @include media-breakpoint-down(lg) {
+              border: none;
+              padding-right: 36px;
+            }
+  
+            @include media-breakpoint-down(sm) {
+              padding-right: 25px;
+            }
+  
+            @include media-breakpoint-down(xs) {
+              padding-right: 25px;
+              border-top: 1px solid $colorBorder;
+            }
+          }
+        }
+  
+        &:last-child {
+          .aside-item {
+            &.item-mini {
+              @include media-breakpoint-down(xs) {
+                border-bottom: 1px solid $colorBorder;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contacts {
+      padding-top: 24px;
+
+      .btn {
+        margin-bottom: 52px;
+      }
+
+      .title {
+        margin-bottom: 12px;
+      }
+
+      .address {
+        margin-bottom: 20px;
+      }
+
+      .email {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.aside-item-link {
+  .aside-item {
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    .item-img {
+      margin-bottom: 8px;
+      border-right: 5px;
+      border-radius: $borderRadius;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+      }
+
+      .overlay {
+        top: 0;
+        left: 0;
+        background-color: rgba($colorBlack, 0);
+        border-radius: $borderRadius;
+        @include transition(background-color);
+
+        span {
+          opacity: 0;
+          @include transition(opacity);
+        }
+      }
+
+      &:hover {
+        .overlay {
+          background-color: rgba($colorBlack, .5);
+
+          span {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .item-info {
+      .title {
+        margin-bottom: 4px;
+      }
+
+      .text {
+        @include transition(color);
+
+        .icon {
+          margin-left: 7px;
+          padding-bottom: 1px;
+
+          svg {
+            @include transition(fill);
+          }
+        }
+
+        &:hover {
+          color: $colorAccess;
+
+          svg {
+            fill: $colorAccess;
+          }
+        }
+      }
+    }
+
+    &.item-mini {
+      flex-direction: row;
+      margin-bottom: 0;
+      padding-top: 23px;
+      padding-bottom: 23px;
+      border-top: 1px solid $colorBorder;
+
+      .item-img {
+        max-width: 89px;
+        margin-bottom: 0;
+        margin-right: 20px;
+
+        img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+
+      .item-info {
+        .title {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    .aside-item {
+      &.item-mini {
+        margin-bottom: 16px;
+        border-bottom: 1px solid $colorBorder;
+      }
+    }
+  }
+}

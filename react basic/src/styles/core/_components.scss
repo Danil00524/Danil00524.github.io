@@ -1,0 +1,84 @@
+// ========== DEFAULT COMPONENTS START ========== //
+// Titles
+.title {
+  font-family: $fontSpectral;
+
+  // h1
+  &.title-main {
+    font-size: 48px;
+    line-height: 1.3;
+  }
+
+  // h2
+  &.title-secondary {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+
+  // h3
+  &.title-xxl {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  // h4
+  &.title-xl {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  // h5
+  &.title-lg {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  // h5
+  &.title-md {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  // h5
+  &.title-sm {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  // h5
+  &.title-xs {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+// Texts
+.text {
+  font-family: $fontBasic;
+
+  &.text-lg {
+    font-size: 18px;
+  }
+
+  &.text-md {
+    font-size: 16px;
+  }
+
+  &.text-sm {
+    font-size: 15px;
+  }
+
+  &.text-xs {
+    font-size: 14px;
+  }
+}
+
+// Inputs
+.form-control {
+  &.line-type {
+    height: 35px;
+    width: 100%;
+    border-bottom: 1px solid $colorWhite;
+  }
+}
+// ========== DEFAULT COMPONENTS END ========== //

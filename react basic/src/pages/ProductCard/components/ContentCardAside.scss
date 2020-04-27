@@ -1,0 +1,135 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/core/mixins";
+@import "../../../styles/grid/breakpoints";
+
+.aside-content-card {
+  padding-top: 40px;
+  
+  &.show-next-tab {
+    .turnkeyсost-section,
+    .logcost-section {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .turnkeyсost-section,
+  .logcost-section {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    transform: translateX(0);
+    @include transition(transform 1s);
+  }
+  
+  .aside-content-container {
+    padding-right: 40px;
+    padding-left: 40px;
+  
+    @include media-breakpoint-down(sm) {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+  
+  .title.title-secondary {
+    @include media-breakpoint-down(sm) {
+      font-size: 24px;
+    }
+  }
+  
+  .info-title {
+    margin-bottom: 40px;
+  }
+  
+  .item-details {
+    margin-bottom: 38px;
+    margin-left: -20px;
+    margin-right: -20px;
+  
+    li {
+      //@include media-breakpoint-down(xl) {
+        margin-bottom: 32px;
+        padding-right: 20px;
+        padding-left: 20px;
+      //}
+    }
+  }
+  
+  .main-desc {
+    margin-bottom: 64px;
+    
+    .paragraph {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  
+  .second-desc {
+    margin-bottom: 70px;
+  }
+  
+  .list-info {
+    margin-bottom: 106px;
+    
+    .list-item {
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+      
+      .item-counter {
+        margin-bottom: 8px;
+      }
+      
+      .item-title {
+        margin-bottom: 17px;
+      }
+    }
+  }
+  
+  .list-info-secondary {
+    margin-left: -52px;
+    margin-right: -52px;
+    margin-bottom: 68px;
+    
+    .list-item {
+      padding-left: 52px;
+      padding-right: 52px;
+      margin-bottom: 40px;
+      
+      .item-icon {
+        width: 41px;
+        height: 41px;
+        margin-bottom: 14px;
+      }
+      
+      .item-title {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  
+  .img-container-big,
+  .img-container-small {
+    .img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .img-container-big {
+    margin-bottom: 64px;
+    
+    .img {
+      height: 562px;
+    }
+  }
+  
+  .img-container-small {
+    margin-bottom: 50px;
+    
+    .img {
+      height: 300px;
+    }
+  }
+}

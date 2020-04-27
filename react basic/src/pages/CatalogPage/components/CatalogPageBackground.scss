@@ -1,0 +1,17 @@
+@import "../../../styles/core/settings";
+
+.catalog-page {
+  .page-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(180deg, rgba($colorDarkBrown, .2) 0%, rgba($colorDarkBrown, .3) 30%, $colorDarkBrown 73%, $colorDarkBrown 100%), url("../../../img/catalog-bg.jpg") no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    @media (max-width: 578px){
+      height: 850px;
+    }
+  }
+}
+

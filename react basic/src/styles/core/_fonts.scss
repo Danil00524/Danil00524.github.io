@@ -1,0 +1,21 @@
+// ========== FONTS START ========== //
+@font-face {
+  font-family: 'SuisseIntl';
+  src: local('SuisseIntl Regular'), local('SuisseIntl-Regular'),
+  url('../../assets/fonts/suisseintl-regular.woff2') format('woff2'),
+  url('../../assets/fonts/suisseintl-regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: local('Spectral ExtraBold'), local('Spectral-ExtraBold'),
+  url('../../assets/fonts/spectral-extrabold.woff2') format('woff2'),
+  url('../../assets/fonts/spectral-extrabold.woff') format('woff');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+// ========== FONTS END ========== //

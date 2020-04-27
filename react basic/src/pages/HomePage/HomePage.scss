@@ -1,0 +1,25 @@
+@import "../../styles/grid/breakpoints";
+
+.home-page {
+  .main-section {
+    height: 100vh;
+    
+    .main-section-content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+  
+      @include media-breakpoint-down(lg) {
+        position: initial;
+      }
+    }
+  }
+  .mirror-section {
+    height: 50vh;
+  
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../styles/core/settings";
+@import '../../styles/core/mixins';
+@import "../../styles/grid/breakpoints";
+
+.instagram-section {
+  padding-top: 104px;
+  padding-bottom: 62px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 86px;
+    padding-bottom: 50px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 73px;
+    padding-bottom: 40px;
+  }
+
+  .title-container {
+    margin-bottom: 82px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 54px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      .title.title-xxl {
+        font-size: 24px !important;
+      }
+    }
+
+
+    .icon {
+      margin-bottom: 18px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  .image-items-container {
+    margin-left: -48px;
+    margin-right: -48px;
+    @media (max-width: 768px){
+      overflow: hidden;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-left: -180px;
+      margin-right: -180px;
+    }
+
+    .image-item-wrapper {
+      width: 16.66666%;
+      padding-right: 15px;
+      padding-left: 15px;
+      @media (max-width: 768px){
+        width: 155px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 0px;
+      }
+
+      &:nth-child(even) {
+        padding-top: 38px;
+      }
+
+      img {
+        width: 100%;
+
+        @include media-breakpoint-down(xs) {
+          height: 108px;
+        }
+      }
+    }
+  }
+}

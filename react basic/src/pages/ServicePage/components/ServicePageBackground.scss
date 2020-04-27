@@ -1,0 +1,15 @@
+@import "../../../styles/core/settings";
+
+.service-page {
+  .page-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(180deg, rgba($colorDarkBrown, .2) 0%, rgba($colorDarkBrown, .3) 25%, $colorDarkBrown 60%, $colorDarkBrown 100%), url("../../../img/services-bg.jpg") no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+
+  }
+}
+

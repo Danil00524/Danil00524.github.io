@@ -1,0 +1,89 @@
+@import "../../../styles/grid/breakpoints";
+
+.service-item-full-info {
+  .sidebar-title {
+    margin-bottom: 30px;
+  }
+
+  .item-details {
+    margin-bottom: 32px;
+  
+    @include media-breakpoint-down(xl) {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    
+    li {
+      @include media-breakpoint-down(xl) {
+        margin-bottom: 32px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .item-info {
+    margin-bottom: 48px;
+  }
+
+  .item-list {
+    margin-bottom: 48px;
+
+    .title-lg {
+      margin-bottom: 32px;
+    }
+
+    .list {
+      .list-item {
+        position: relative;
+        padding-left: 28px;
+
+        &::before {
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 12px;
+          height: 12px;
+        }
+
+        .title {
+          margin-bottom: 8px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    &.type-included {
+      .list {
+        .list-item {
+          &::before {
+            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.55 1.95C10.95 1.35 10.05 1.35 9.45 1.95L4.5 6.9L2.55 4.95C1.95 4.35 1.05 4.35 0.45 4.95C-0.15 5.55 -0.15 6.45 0.45 7.05L3.45 10.05C3.75 10.35 4.2 10.5 4.5 10.5C4.8 10.5 5.25 10.35 5.55 10.05L11.55 4.05C12.15 3.45 12.15 2.55 11.55 1.95Z" fill="#00C170"/></svg>');
+          }
+        }
+      }
+    }
+
+    &.type-excluded {
+      .list {
+        .list-item {
+          &::before {
+            content: url('data:image/svg+xml;charset=UTF-8, <svg width="12" height="4" viewBox="0 0 12 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.2 0.799805C0.48 0.799805 0 1.2798 0 1.9998C0 2.7198 0.48 3.1998 1.2 3.1998H10.8C11.52 3.1998 12 2.7198 12 1.9998C12 1.2798 11.52 0.799805 10.8 0.799805H1.2Z" fill="#FF1111"/></svg>');
+          }
+        }
+      }
+    }
+  }
+
+  .item-action {
+    .title {
+      margin-bottom: 8px;
+    }
+
+    .text {
+      margin-bottom: 20px;
+    }
+  }
+}

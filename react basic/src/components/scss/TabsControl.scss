@@ -1,0 +1,80 @@
+@import "../../styles/core/settings";
+@import "../../styles/core/mixins";
+@import "../../styles/grid/breakpoints";
+
+.service-our-services-section .container {
+  @include media-breakpoint-down(sm) {
+    .tabs-control {
+      margin-bottom: 56px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .tabs-control.mx-auto {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .control-list {
+      overflow-x: scroll;
+    }
+  }
+}
+
+.tabs-control {
+
+  .control-list {
+    border-bottom: 1px solid rgba($colorWhite, .5);
+
+    .list-item {
+      padding: 16px 32px;
+      color: rgba($colorWhite, .5);
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      position: relative;
+      @include transition(color, border-bottom-color);
+      @media (max-width: 578px){
+        padding: 12px 15px;
+        font-size: 14px;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        transition: .3s;
+        background: #fff;
+        border-radius: 10px 10px 0 0;
+      }
+      &.active {
+        color: $colorWhite;
+        //border-bottom: 2px solid $colorWhite;
+        cursor: default;
+        &:before{
+          width: 100%;
+        }
+      }
+
+      &:not(.active):hover {
+        color: $colorAccess;
+      }
+    }
+  }
+
+  &.white {
+    .control-list {
+      border-bottom-color: $colorBorder;
+
+      .list-item {
+        color: rgba($colorDarkBrown, .5);
+
+        &.active {
+          color: $colorDarkBrown;
+          border-bottom-color: $colorDarkBrown;
+        }
+      }
+    }
+  }
+}

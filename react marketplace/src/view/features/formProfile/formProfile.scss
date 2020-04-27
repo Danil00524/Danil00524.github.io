@@ -1,0 +1,42 @@
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.profile{
+    margin: 0 auto;
+    width: 430px;
+    .photo{
+        text-align: center;
+        padding-bottom: 20px;
+        & svg{
+            width: 50px;
+        }
+    }
+    h4{
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
+    .profile__name{
+        display: flex;
+        justify-content: space-between;
+        input{
+            width: 210px;
+        }
+    }
+    .profile__card-info{
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    input{
+        border: 1px solid #000;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    button{
+        
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../../styles/grid/breakpoints";
+
+.service-hero-section {
+  padding-top: 45px;
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 32px;
+
+    .breadcrumbs {
+      display: none !important;
+    }
+  }
+
+  .title-info {
+    .title-lg {
+      margin-bottom: 8px;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .title-main {
+      max-width: 870px;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 36px;
+        margin-bottom: 24px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        font-size: 32px;
+        margin-bottom: 32px;
+      }
+
+    }
+  }
+}

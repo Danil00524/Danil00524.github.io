@@ -1,0 +1,14 @@
+.input-text-component {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff;
+  margin: 10px 0;
+
+  &--datepicker {
+    width: 140px;
+  }
+}

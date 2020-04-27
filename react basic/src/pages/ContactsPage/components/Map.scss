@@ -1,0 +1,71 @@
+@import "../../../styles/grid/breakpoints";
+
+.contacts-map {
+  position: relative;
+}
+.contacts-map__popup {
+  position: absolute;
+  bottom: 82px;
+  right: 206px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  z-index: 1;
+  max-width: 287px;
+}
+.contacts-map__popup-inner {
+  padding: 32px 48px 40px 48px;
+}
+.contacts-map__popup-address,
+.contacts-map__popup-email,
+.contacts-map__popup-phone,
+.contacts-map__popup-social {
+  line-height: 170%;
+  color: #2b2121;
+  margin-bottom: 33px;
+  & span {
+    display: block;
+    font-size: 14px;
+    color: #a8a5a5;
+    margin-bottom: 4px;
+  }
+}
+.contacts-map__popup-social {
+  & span {
+    margin-bottom: 12px;
+  }
+}
+.contacts-map__popup-social {
+  & ul {
+    & li {
+      display: inline-block;
+      & + li {
+        margin-left: 29px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .map {
+    height: 394px !important;
+  }
+  .contacts-map__popup {
+    bottom: 43px;
+    right: 40px;
+  }
+  .contacts-map__popup-social {
+    display: none;
+  }
+  .contacts-map__popup-phone {
+    margin-bottom: 0;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .map {
+    height: 231px !important;
+  }
+  .contacts-map__popup {
+    display: none;
+  }
+}

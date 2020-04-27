@@ -1,0 +1,33 @@
+.salon-card-container {
+    margin-bottom: 20px;
+    &__preview-wrapper {
+        width: 375px;
+        height: 160px;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        object-fit: cover;
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    &__btn-group {
+
+      & button {
+        margin-left: 10px;
+      }
+    }
+    &__salon-name {
+    }
+    &__footer {
+    }
+    &__address-box {
+    }
+    &__rating-box {
+    }
+}

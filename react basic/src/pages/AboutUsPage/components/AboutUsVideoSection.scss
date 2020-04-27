@@ -1,0 +1,25 @@
+@import "../../../styles/core/settings";
+
+.about-us-video-section {
+  padding-top: 125px;
+  padding-bottom: 68px;
+  @media (max-width: 991px){
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .title-xxl {
+    max-width: 450px;
+    margin-bottom: 32px;
+  }
+
+  .text-md {
+    max-width: 550px;
+    margin-bottom: 64px;
+    opacity: .5;
+  }
+
+  .video-container {
+    border-radius: $borderRadius;
+  }
+}

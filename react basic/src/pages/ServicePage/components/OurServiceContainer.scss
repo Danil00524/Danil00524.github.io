@@ -1,0 +1,12 @@
+@import "../../../styles/grid/breakpoints";
+
+@include media-breakpoint-down(sm) {
+    .service-our-services-section {
+        .tabs-container {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            flex-direction: column;
+        }
+    }
+}

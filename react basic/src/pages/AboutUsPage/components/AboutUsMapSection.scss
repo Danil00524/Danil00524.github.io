@@ -1,0 +1,27 @@
+
+
+.about-us-map-section {
+  padding-top: 190px;
+  padding-bottom: 200px;
+  @media (max-width: 991px){
+    padding: 100px 0;
+  }
+  @media (max-width: 768px){
+    padding: 80px 24px;
+  }
+
+  background-image: url("../../../img/map.svg");
+
+  .title,
+  .text-lg {
+    margin-bottom: 32px;
+  }
+
+  .text {
+    max-width: 530px;
+  }
+
+  .text-md {
+    opacity: .5;
+  }
+}

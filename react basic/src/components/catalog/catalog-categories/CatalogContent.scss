@@ -1,0 +1,9 @@
+.catalog-wrapper {
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-bottom: 30px;
+  @media (max-width: 578px) {
+    margin: 0 0 20px;
+  }
+}
+

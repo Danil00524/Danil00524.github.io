@@ -1,0 +1,19 @@
+.modal {
+    display: flex;
+    right: 0;
+    bottom: 0;
+    background-image: url(../../assets/img/modal-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    overflow-y: auto;
+    transform: translateZ(0);
+
+    &__content {
+        position: relative;
+    }
+
+    &--show {
+        opacity: 1;
+    }
+}

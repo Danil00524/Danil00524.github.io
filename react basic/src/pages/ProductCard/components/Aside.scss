@@ -1,0 +1,300 @@
+@import "../../../styles/core/settings";
+@import "../../../styles/core/mixins";
+@import "../../../styles/grid/breakpoints";
+
+.product-card-aside {
+  width: 366px;
+  z-index: 5;
+  @include transition(width);
+  transition-delay: .3s;
+  
+  @include media-breakpoint-down(lg) {
+    width: initial;
+    z-index: initial;
+  }
+
+  &.closed {
+    width: 0;
+  }
+
+  &.expanded {
+    width: 720px;
+    
+    @media (max-width: 1710px) {
+      width: 585px;
+    }
+  
+    @include media-breakpoint-down(xl) {
+      width: 420px;
+    }
+  
+    @include media-breakpoint-down(lg) {
+      width: initial;
+    }
+  }
+
+  .product-card-aside-content {
+    position: relative;
+  
+    .mobile-title {
+      position: sticky;
+      top: 0;
+      left: 0;
+      height: 72px;
+      padding-left: 40px;
+      padding-right: 24px;
+      background-color: $colorWhite;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+      
+      .title-sm {
+        margin-right: 20px;
+      }
+      
+      .leave-a-request {
+        margin-right: 12px;
+      }
+    }
+  
+    .content-card-wrapper {
+      .mobile-title {
+        padding-left: 0;
+        
+        .content-tabs {
+          
+          &.title-lg {
+            @include media-breakpoint-down(sm) {
+              font-size: 18px;
+            }
+          }
+          
+          .content-tab {
+            padding: 0 40px;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            color: $colorBlackGray;
+            @include transition(color, border-bottom-color);
+  
+            @include media-breakpoint-down(sm) {
+              padding: 0 24px;
+            }
+            
+            &.active {
+              border-bottom-color: $colorDarkBrown;
+              color: $colorDarkBrown;
+            }
+          }
+        }
+      }
+    }
+    
+  
+    .content-card-wrapper,
+    .turnkey-cost-content-wrapper,
+    .log-cost-content-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 720px;
+      height: 100vh;
+      overflow-y: auto;
+      opacity: 0;
+      transform: translateY(120vh);
+      @include transition(opacity .5s, transform 1s);
+  
+      @media (max-width: 1710px) {
+        width: 585px;
+      }
+  
+      @include media-breakpoint-down(xl) {
+        width: 420px;
+      }
+  
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: #fff;
+        transform: translateX(100%);
+        opacity: 1;
+        @include transition(opacity .5s, transform .5s, height);
+      }
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+        height: 100%;
+  
+        @include media-breakpoint-down(lg) {
+          transform: translateX(0);
+        }
+      }
+
+      .turnkey-cost-content,
+      .log-cost-content {
+        padding: 26px 32px;
+  
+        @media (max-width: 1710px) {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+  
+        @include media-breakpoint-down(lg) {
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-top: 42px;
+        }
+  
+        @include media-breakpoint-down(sm) {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+      }
+    }
+
+    .default-content-wrapper-outer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 366px;
+      height: 100vh;
+      opacity: 1;
+      transform: translateY(0);
+      @include transition(opacity .5s, transform 1s);
+  
+      @include media-breakpoint-down(lg) {
+        position: initial;
+        height: 100%;
+        width: initial;
+        @include transition(opacity .5s, transform .5s);
+      }
+  
+      @include media-breakpoint-down(sm) {
+        transform: initial;
+      }
+
+      &.hide {
+        opacity: 0;
+        transform: translateY(120vh);
+        height: 0;
+        
+        @include media-breakpoint-down(lg) {
+          height: initial;
+          transform: initial;
+          opacity: initial;
+        }
+      }
+
+      .default-content-wrapper-inner {
+        max-height: calc(100vh);
+        overflow-y: auto;
+  
+        @include media-breakpoint-down(lg) {
+          max-height: initial;
+          overflow-y: initial;
+        }
+        
+        .details {
+          @include media-breakpoint-down(lg) {
+            div:first-child {
+              min-width: 270px;
+            }
+          }
+          @include media-breakpoint-down(sm) {
+            div:first-child {
+              min-width: 170px;
+            }
+          }
+        }
+
+        .default-content {
+          padding: 26px 32px 135px;
+  
+          @include media-breakpoint-down(lg) {
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 64px;
+          }
+  
+          @include media-breakpoint-down(sm) {
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+  
+          .mr-12px {
+            margin-right: 12px;
+          }
+
+          .mb-24px {
+            margin-bottom: 24px;
+          }
+
+          .mb-32px {
+            margin-bottom: 32px;
+          }
+
+          .title-lg {
+            margin-bottom: 5px;
+          }
+
+          .feature-title {
+            margin-bottom: 2px;
+          }
+
+          .link {
+            margin-top: 5px;
+          }
+
+          .description {
+            white-space: pre-line;
+
+            .title {
+              margin-bottom: 8px;
+            }
+          }
+          
+          .btn-read-more {
+            margin-top: 24px;
+          }
+        }
+      }
+
+      .product-card-aside-actions {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 24px 32px;
+        background-color: $colorWhite;
+  
+        @include media-breakpoint-down(sm) {
+          padding: 18px 32px;
+          position: fixed;
+          z-index: 101;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          height: 57px;
+          width: 100%;
+          background: linear-gradient(180deg, rgba($colorWhite, 0) 0%, rgba($colorWhite, .75) 44.36%, $colorWhite 100%);
+          box-shadow: inset 0px -10px 20px -20px rgba($colorBlack, .3);
+  
+          @include media-breakpoint-down(sm) {
+            background: initial;
+            height: 10px;
+          }
+        }
+
+        .share-btn {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+
+
+}

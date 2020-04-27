@@ -1,0 +1,73 @@
+// ========== RESET START ========== //
+body {
+    margin: 0;
+    font: $font-basic-size/1 $default-font-family, sans-serif;
+    color: $primary-font-color;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+p, blockquote {
+    margin: 0;
+}
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: $blue-font;
+    text-decoration: none;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+img {
+    max-width: 100%;
+}
+input {
+    width: 100%;
+}
+input,
+textarea,
+button,
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    background-color: transparent;
+}
+input,
+textarea,
+input:focus,
+textarea:focus {
+    border: none;
+}
+input[type="file"] {
+    cursor: pointer;
+}
+textarea {
+    resize: vertical;
+}
+button {
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border:none;
+}
+// ========== RESET END ========== //
+
