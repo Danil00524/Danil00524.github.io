@@ -1,0 +1,149 @@
+@import './_colors.scss';
+@import './_texts.scss';
+@import './_main.scss';
+@import './_fonts.scss';
+@import './_media.scss';
+
+html {
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #e5e5e5;
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.v-application ol,
+.v-application ul,
+.v-application p {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.order-sidebar_price-valuta {
+  display: flex;
+  align-items: center;
+  font-family: 'MagistralC';
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  & p {
+    border-right: 1px solid #fff;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  & .vs__search {
+    display: none;
+  }
+
+  .v-select {
+    .vs__dropdown-toggle {
+      width: 100px;
+      height: 25px;
+      border: none;
+
+      .vs__actions {
+        position: relative;
+        margin-right: 8px;
+
+        &::after {
+          position: absolute;
+          font-size: 9px;
+          color: #fff;
+          content: '\e92e';
+          font-family: 'icomoon';
+          top: 6px;
+          left: 6px;
+          /* z-index: 2; */
+        }
+
+        & svg {
+          display: none;
+        }
+      }
+
+      .vs__selected-options {
+        .vs__selected {
+          font-family: 'MagistralC';
+          font-size: 12px;
+          color: #fff;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+
+        .vs__search::placeholder {
+          font-weight: bold;
+          font-family: 'MagistralC';
+          font-size: 12px;
+          color: #fff;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .vs__dropdown-menu {
+      background: #1d1d1d;
+      color: $white;
+      min-width: 100px;
+      padding: 0px;
+      width: 100px !important;
+      box-shadow: none;
+      border: none;
+
+      .vs__dropdown-option {
+        color: $white;
+        padding-left: 10px;
+      }
+
+      .vs__dropdown-option--highlight {
+        background: $gold;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.under__construction {
+  font-family: 'MagistralC';
+  font-size: 42px;
+  font-weight: bold;
+  color: #a12c3a;
+  text-align: center;
+  width: 100%;
+}

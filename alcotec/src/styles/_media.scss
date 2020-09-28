@@ -1,0 +1,53 @@
+@media (min-width: 1200px) {
+  .custom-container {
+    max-width: 1650px;
+  }
+
+  .main__page-container {
+    max-width: 1770px;
+  }
+
+  .custom-container-outside {
+    max-width: 1950px;
+  }
+
+  .personal__cabinet-container {
+    max-width: 1130px;
+  }
+
+  .card__container {
+    max-width: 100%;
+  }
+
+  .card__product-container,
+  .project__card-container {
+    max-width: 1170px;
+  }
+
+  .sidebar__compare-container {
+    max-width: 1660px;
+  }
+
+  .sidebar__compare-inner-container {
+    max-width: 1250px;
+  }
+}
+
+@media print {
+  /* здесь будут стили для печати */
+  .header {
+    display: none;
+  }
+  .breadcrumbs {
+    display: none;
+  }
+  .personal__cabinet-top {
+    display: none;
+  }
+  .order-sidebar {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+}
